@@ -1,0 +1,1409 @@
+<!doctype html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns# video: http://ogp.me/ns/video# ya: http://webmaster.yandex.ru/vocabularies/">
+
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="publisher" href="https://plus.google.com/107320569931932704012">
+	<link rel="pingback" href="https://www.cbronline.com/xmlrpc.php">
+	<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,300,600,700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" async="true"src="//fo-api.omnitagjs.com/fo-api/ot.js"></script>
+	
+<!--- Added Organization name and address for structure data elements ------>	
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "Organization",
+	  "url": "http://www.cbronline.com/",
+	  "name": "Computer Business Review.",
+	  "contactPoint": {
+		"@type": "ContactPoint",
+		"name":"Jake Sharp",
+		"telephone": "+44 (0)20 7936 6898",
+		"contactType": "Customer service"
+	  },
+	  "address" : {
+      "@type": "PostalAddress",
+      "streetAddress": "40-42 Hatton Garden",
+      "addressLocality":"London",
+      "addressRegion":"London",
+      "postalCode":"EC1N 8EB",
+      "addressCountry":"UK"
+      }
+	}
+</script>
+
+<!--- End Organization name and address for structure data elements ------>
+
+	<link rel="icon" href="https://www.cbronline.com/wp-content/uploads/2016/09/cbr-icon-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://www.cbronline.com/wp-content/uploads/2016/09/cbr-icon.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.cbronline.com/wp-content/uploads/2016/09/cbr-icon.png" />
+<meta name="msapplication-TileImage" content="https://www.cbronline.com/wp-content/uploads/2016/09/cbr-icon.png" />
+	
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+	<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+	<link rel="dns-prefetch" href="//0.gravatar.com/" />
+	<link rel="dns-prefetch" href="//2.gravatar.com/" />
+	<link rel="dns-prefetch" href="//1.gravatar.com/" />
+	<link type="text/css" media="all" href="https://www.cbronline.com/wp-content/uploads/autoptimize/css/autoptimize_f7fb41d9940d14ca37e2d5a1f7f9aadc.css" rel="stylesheet" /><title>What is a URL? - Computer Business Review</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v7.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="A URL is commonly known as being a web address, with the acronym standing for Uniform Recourse Locater."/>
+<meta name="news_keywords" content="" />
+<meta name="original-source" content="https://www.cbronline.com/what-is/what-is-a-url-4934011/" />
+<link rel="canonical" href="https://www.cbronline.com/what-is/what-is-a-url-4934011/" />
+<link rel="next" href="https://www.cbronline.com/what-is/what-is-a-url-4934011/2/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What is a URL? - Computer Business Review" />
+<meta property="og:description" content="A URL is commonly known as being a web address, with the acronym standing for Uniform Recourse Locater." />
+<meta property="og:url" content="https://www.cbronline.com/what-is/what-is-a-url-4934011/" />
+<meta property="og:site_name" content="Computer Business Review" />
+<meta property="article:section" content="What Is" />
+<meta property="article:published_time" content="2016-06-28T00:17:00+01:00" />
+<meta property="article:modified_time" content="2017-02-07T09:36:00+01:00" />
+<meta property="og:updated_time" content="2017-02-07T09:36:00+01:00" />
+<meta property="og:image" content="https://www.cbronline.com/wp-content/uploads/2016/06/what-is-URL.jpg" />
+<meta property="og:image:secure_url" content="https://www.cbronline.com/wp-content/uploads/2016/06/what-is-URL.jpg" />
+<meta property="og:image:width" content="1714" />
+<meta property="og:image:height" content="1120" />
+<meta property="og:image:alt" content="what is URL" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="A URL is commonly known as being a web address, with the acronym standing for Uniform Recourse Locater." />
+<meta name="twitter:title" content="What is a URL? - Computer Business Review" />
+<meta name="twitter:image" content="https://www.cbronline.com/wp-content/uploads/2016/06/what-is-URL.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//www.cbronline.com' />
+<link rel='dns-prefetch' href='//js.hs-scripts.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Computer Business Review &raquo; Feed" href="https://www.cbronline.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Computer Business Review &raquo; Comments Feed" href="https://www.cbronline.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Computer Business Review &raquo; What is a URL? Comments Feed" href="https://www.cbronline.com/what-is/what-is-a-url-4934011/feed/" />
+						<meta property="fb:app_id" content="1880004222235592" /> 
+						<meta property="og:title" content="What is a URL?" />
+			<meta property="og:type" content="article" />
+			<meta property="og:description" content="Every single one of the 4 billion pages available on the internet has one." />
+			<meta property="og:image" content="https://www.cbronline.com/wp-content/uploads/2016/06/what-is-URL.jpg" />
+			<meta property="og:url" content="https://www.cbronline.com/what-is/what-is-a-url-4934011/" />
+					<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.cbronline.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.6"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+
+
+
+
+<link rel='stylesheet' id='tp-open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%2C800&#038;ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='tp-raleway-css'  href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;ver=4.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='tp-droid-serif-css'  href='https://fonts.googleapis.com/css?family=Droid+Serif%3A400%2C700&#038;ver=4.9.6' type='text/css' media='all' />
+
+
+
+
+
+<style id='thb-app-inline-css' type='text/css'>
+body { font-family:'Poppins';color:;}.post .post-content p,.post .post-content ul,.post .post-content ol {font-family:'Lato';}.titlefont, body, h1, h2, h3, h4, h5, h6, blockquote, .subheader, .post-review ul li, .post-review .comment_section p:before, .post-review .post_comment, .subcategory_container ul li a, .featured_image_credit {font-family:'Poppins';}@media only screen and (min-width:48.063em) {.header {}}.header {background-color:#ffffff !important;}@media only screen and (min-width:64.063em) {.header .logo .logoimg {max-height:83px;}}a:hover, .menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.active a,.menu-holder ul li.sfHover > a, .subcategory_container .thb-sibling-categories li a:hover,label small, .more-link, .comment-respond .comment-reply-title small a, .btn.accent, .button.accent, input[type=submit].accent, .btn.accent-transparent, .button.accent-transparent, input[type=submit].accent-transparent, .category_title.search span, .video_playlist .video_play.video-active .post-title h6, .menu-holder.dark ul li .sub-menu a:hover, .menu-holder.dark ul.sf-menu > li > a:hover {color:#0b85f4;}ul.point-list li:before, ol.point-list li:before, .post .article-tags .tags-title, .post.post-overlay .post-gallery .counts,.post-review ul li .progress span, .post-review .average, .category-title.style1 .category-header, .widget.widget_topreviews .style1 li .progress, .btn.black:hover, .button.black:hover, input[type=submit].black:hover, .btn.white:hover, .button.white:hover, input[type=submit].white:hover, .btn.accent-transparent:hover, .button.accent-transparent:hover, input[type=submit].accent-transparent:hover, #scroll_totop:hover, .subheader.fixed > .row .progress {background-color:#0b85f4;}.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder, .btn.black:hover, .button.black:hover, input[type=submit].black:hover, .btn.accent, .button.accent, input[type=submit].accent, .btn.white:hover, .button.white:hover, input[type=submit].white:hover, .btn.accent-transparent, .button.accent-transparent, input[type=submit].accent-transparent {border-color:#0b85f4;}.post .article-tags .tags-title:after {border-left-color:#0b85f4;}.circle_rating .circle_perc {stroke:#0b85f4;}.header .quick_search.active .quick_search_icon {fill:#0b85f4;}.post .post-content p a {border-color:#11c8ff;-moz-box-shadow:inset 0 -5px 0 #11c8ff;-webkit-box-shadow:inset 0 -5px 0 #11c8ff;box-shadow:inset 0 -5px 0 #11c8ff;}.post .post-content p a:hover {background:#11c8ff;}.widget {padding-top:0px;padding-right:0px;padding-bottom:10px;padding-left:15px;;}.menu-holder ul.sf-menu > li > a {}.menu-holder ul li .sub-menu li a,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li > a {}.header .menu-holder ul.sf-menu > li.menu-item-category-1985 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1985 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1985 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1985.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1985 > a:hover,.post .single_category_title.category-link-1985 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1985 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1985.boxed-link,.category_title.cat-1985:before,.category-title.style1 .category-header.cat-1985 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-331 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-331 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-331 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-331.active > a,.menu-holder ul li .sub-menu li.menu-item-category-331 > a:hover,.post .single_category_title.category-link-331 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-331 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-331.boxed-link,.category_title.cat-331:before,.category-title.style1 .category-header.cat-331 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1744 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1744 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1744 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1744.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1744 > a:hover,.post .single_category_title.category-link-1744 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1744 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1744.boxed-link,.category_title.cat-1744:before,.category-title.style1 .category-header.cat-1744 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1765 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1765 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1765 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1765.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1765 > a:hover,.post .single_category_title.category-link-1765 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1765 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1765.boxed-link,.category_title.cat-1765:before,.category-title.style1 .category-header.cat-1765 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-770 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-770 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-770 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-770.active > a,.menu-holder ul li .sub-menu li.menu-item-category-770 > a:hover,.post .single_category_title.category-link-770 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-770 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-770.boxed-link,.category_title.cat-770:before,.category-title.style1 .category-header.cat-770 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-345 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-345 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-345 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-345.active > a,.menu-holder ul li .sub-menu li.menu-item-category-345 > a:hover,.post .single_category_title.category-link-345 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-345 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-345.boxed-link,.category_title.cat-345:before,.category-title.style1 .category-header.cat-345 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1758 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1758 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1758 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1758.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1758 > a:hover,.post .single_category_title.category-link-1758 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1758 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1758.boxed-link,.category_title.cat-1758:before,.category-title.style1 .category-header.cat-1758 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-351 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-351 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-351 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-351.active > a,.menu-holder ul li .sub-menu li.menu-item-category-351 > a:hover,.post .single_category_title.category-link-351 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-351 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-351.boxed-link,.category_title.cat-351:before,.category-title.style1 .category-header.cat-351 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1763 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1763 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1763 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1763.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1763 > a:hover,.post .single_category_title.category-link-1763 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1763 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1763.boxed-link,.category_title.cat-1763:before,.category-title.style1 .category-header.cat-1763 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-320 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-320 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-320 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-320.active > a,.menu-holder ul li .sub-menu li.menu-item-category-320 > a:hover,.post .single_category_title.category-link-320 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-320 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-320.boxed-link,.category_title.cat-320:before,.category-title.style1 .category-header.cat-320 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1732 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1732 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1732 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1732.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1732 > a:hover,.post .single_category_title.category-link-1732 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1732 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1732.boxed-link,.category_title.cat-1732:before,.category-title.style1 .category-header.cat-1732 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1771 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1771 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1771 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1771.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1771 > a:hover,.post .single_category_title.category-link-1771 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1771 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1771.boxed-link,.category_title.cat-1771:before,.category-title.style1 .category-header.cat-1771 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1873 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1873 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1873 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1873.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1873 > a:hover,.post .single_category_title.category-link-1873 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1873 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1873.boxed-link,.category_title.cat-1873:before,.category-title.style1 .category-header.cat-1873 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1745 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1745 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1745 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1745.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1745 > a:hover,.post .single_category_title.category-link-1745 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1745 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1745.boxed-link,.category_title.cat-1745:before,.category-title.style1 .category-header.cat-1745 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-335 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-335 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-335 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-335.active > a,.menu-holder ul li .sub-menu li.menu-item-category-335 > a:hover,.post .single_category_title.category-link-335 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-335 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-335.boxed-link,.category_title.cat-335:before,.category-title.style1 .category-header.cat-335 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1748 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1748 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1748 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1748.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1748 > a:hover,.post .single_category_title.category-link-1748 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1748 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1748.boxed-link,.category_title.cat-1748:before,.category-title.style1 .category-header.cat-1748 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1795 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1795 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1795 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1795.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1795 > a:hover,.post .single_category_title.category-link-1795 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1795 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1795.boxed-link,.category_title.cat-1795:before,.category-title.style1 .category-header.cat-1795 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-385 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-385 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-385 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-385.active > a,.menu-holder ul li .sub-menu li.menu-item-category-385 > a:hover,.post .single_category_title.category-link-385 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-385 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-385.boxed-link,.category_title.cat-385:before,.category-title.style1 .category-header.cat-385 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-316 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-316 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-316 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-316.active > a,.menu-holder ul li .sub-menu li.menu-item-category-316 > a:hover,.post .single_category_title.category-link-316 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-316 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-316.boxed-link,.category_title.cat-316:before,.category-title.style1 .category-header.cat-316 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1728 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1728 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1728 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1728.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1728 > a:hover,.post .single_category_title.category-link-1728 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1728 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1728.boxed-link,.category_title.cat-1728:before,.category-title.style1 .category-header.cat-1728 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-327 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-327 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-327 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-327.active > a,.menu-holder ul li .sub-menu li.menu-item-category-327 > a:hover,.post .single_category_title.category-link-327 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-327 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-327.boxed-link,.category_title.cat-327:before,.category-title.style1 .category-header.cat-327 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1740 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1740 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1740 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1740.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1740 > a:hover,.post .single_category_title.category-link-1740 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1740 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1740.boxed-link,.category_title.cat-1740:before,.category-title.style1 .category-header.cat-1740 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-631 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-631 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-631 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-631.active > a,.menu-holder ul li .sub-menu li.menu-item-category-631 > a:hover,.post .single_category_title.category-link-631 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-631 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-631.boxed-link,.category_title.cat-631:before,.category-title.style1 .category-header.cat-631 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-343 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-343 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-343 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-343.active > a,.menu-holder ul li .sub-menu li.menu-item-category-343 > a:hover,.post .single_category_title.category-link-343 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-343 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-343.boxed-link,.category_title.cat-343:before,.category-title.style1 .category-header.cat-343 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1756 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1756 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1756 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1756.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1756 > a:hover,.post .single_category_title.category-link-1756 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1756 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1756.boxed-link,.category_title.cat-1756:before,.category-title.style1 .category-header.cat-1756 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-779 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-779 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-779 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-779.active > a,.menu-holder ul li .sub-menu li.menu-item-category-779 > a:hover,.post .single_category_title.category-link-779 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-779 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-779.boxed-link,.category_title.cat-779:before,.category-title.style1 .category-header.cat-779 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-319 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-319 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-319 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-319.active > a,.menu-holder ul li .sub-menu li.menu-item-category-319 > a:hover,.post .single_category_title.category-link-319 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-319 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-319.boxed-link,.category_title.cat-319:before,.category-title.style1 .category-header.cat-319 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1766 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1766 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1766 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1766.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1766 > a:hover,.post .single_category_title.category-link-1766 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1766 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1766.boxed-link,.category_title.cat-1766:before,.category-title.style1 .category-header.cat-1766 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1768 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1768 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1768 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1768.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1768 > a:hover,.post .single_category_title.category-link-1768 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1768 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1768.boxed-link,.category_title.cat-1768:before,.category-title.style1 .category-header.cat-1768 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-356 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-356 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-356 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-356.active > a,.menu-holder ul li .sub-menu li.menu-item-category-356 > a:hover,.post .single_category_title.category-link-356 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-356 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-356.boxed-link,.category_title.cat-356:before,.category-title.style1 .category-header.cat-356 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1767 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1767 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1767 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1767.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1767 > a:hover,.post .single_category_title.category-link-1767 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1767 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1767.boxed-link,.category_title.cat-1767:before,.category-title.style1 .category-header.cat-1767 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1735 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1735 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1735 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1735.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1735 > a:hover,.post .single_category_title.category-link-1735 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1735 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1735.boxed-link,.category_title.cat-1735:before,.category-title.style1 .category-header.cat-1735 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-321 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-321 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-321 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-321.active > a,.menu-holder ul li .sub-menu li.menu-item-category-321 > a:hover,.post .single_category_title.category-link-321 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-321 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-321.boxed-link,.category_title.cat-321:before,.category-title.style1 .category-header.cat-321 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1733 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1733 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1733 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1733.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1733 > a:hover,.post .single_category_title.category-link-1733 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1733 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1733.boxed-link,.category_title.cat-1733:before,.category-title.style1 .category-header.cat-1733 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1769 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1769 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1769 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1769.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1769 > a:hover,.post .single_category_title.category-link-1769 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1769 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1769.boxed-link,.category_title.cat-1769:before,.category-title.style1 .category-header.cat-1769 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-330 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-330 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-330 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-330.active > a,.menu-holder ul li .sub-menu li.menu-item-category-330 > a:hover,.post .single_category_title.category-link-330 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-330 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-330.boxed-link,.category_title.cat-330:before,.category-title.style1 .category-header.cat-330 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1743 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1743 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1743 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1743.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1743 > a:hover,.post .single_category_title.category-link-1743 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1743 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1743.boxed-link,.category_title.cat-1743:before,.category-title.style1 .category-header.cat-1743 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-436 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-436 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-436 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-436.active > a,.menu-holder ul li .sub-menu li.menu-item-category-436 > a:hover,.post .single_category_title.category-link-436 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-436 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-436.boxed-link,.category_title.cat-436:before,.category-title.style1 .category-header.cat-436 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-499 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-499 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-499 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-499.active > a,.menu-holder ul li .sub-menu li.menu-item-category-499 > a:hover,.post .single_category_title.category-link-499 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-499 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-499.boxed-link,.category_title.cat-499:before,.category-title.style1 .category-header.cat-499 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-315 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-315 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-315 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-315.active > a,.menu-holder ul li .sub-menu li.menu-item-category-315 > a:hover,.post .single_category_title.category-link-315 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-315 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-315.boxed-link,.category_title.cat-315:before,.category-title.style1 .category-header.cat-315 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1727 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1727 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1727 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1727.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1727 > a:hover,.post .single_category_title.category-link-1727 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1727 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1727.boxed-link,.category_title.cat-1727:before,.category-title.style1 .category-header.cat-1727 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-541 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-541 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-541 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-541.active > a,.menu-holder ul li .sub-menu li.menu-item-category-541 > a:hover,.post .single_category_title.category-link-541 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-541 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-541.boxed-link,.category_title.cat-541:before,.category-title.style1 .category-header.cat-541 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-412 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-412 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-412 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-412.active > a,.menu-holder ul li .sub-menu li.menu-item-category-412 > a:hover,.post .single_category_title.category-link-412 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-412 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-412.boxed-link,.category_title.cat-412:before,.category-title.style1 .category-header.cat-412 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1754 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1754 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1754 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1754.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1754 > a:hover,.post .single_category_title.category-link-1754 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1754 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1754.boxed-link,.category_title.cat-1754:before,.category-title.style1 .category-header.cat-1754 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1734 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1734 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1734 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1734.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1734 > a:hover,.post .single_category_title.category-link-1734 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1734 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1734.boxed-link,.category_title.cat-1734:before,.category-title.style1 .category-header.cat-1734 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-344 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-344 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-344 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-344.active > a,.menu-holder ul li .sub-menu li.menu-item-category-344 > a:hover,.post .single_category_title.category-link-344 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-344 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-344.boxed-link,.category_title.cat-344:before,.category-title.style1 .category-header.cat-344 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1757 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1757 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1757 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1757.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1757 > a:hover,.post .single_category_title.category-link-1757 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1757 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1757.boxed-link,.category_title.cat-1757:before,.category-title.style1 .category-header.cat-1757 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-402 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-402 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-402 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-402.active > a,.menu-holder ul li .sub-menu li.menu-item-category-402 > a:hover,.post .single_category_title.category-link-402 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-402 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-402.boxed-link,.category_title.cat-402:before,.category-title.style1 .category-header.cat-402 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1773 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1773 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1773 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1773.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1773 > a:hover,.post .single_category_title.category-link-1773 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1773 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1773.boxed-link,.category_title.cat-1773:before,.category-title.style1 .category-header.cat-1773 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-342 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-342 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-342 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-342.active > a,.menu-holder ul li .sub-menu li.menu-item-category-342 > a:hover,.post .single_category_title.category-link-342 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-342 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-342.boxed-link,.category_title.cat-342:before,.category-title.style1 .category-header.cat-342 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1755 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1755 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1755 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1755.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1755 > a:hover,.post .single_category_title.category-link-1755 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1755 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1755.boxed-link,.category_title.cat-1755:before,.category-title.style1 .category-header.cat-1755 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-329 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-329 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-329 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-329.active > a,.menu-holder ul li .sub-menu li.menu-item-category-329 > a:hover,.post .single_category_title.category-link-329 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-329 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-329.boxed-link,.category_title.cat-329:before,.category-title.style1 .category-header.cat-329 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1742 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1742 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1742 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1742.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1742 > a:hover,.post .single_category_title.category-link-1742 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1742 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1742.boxed-link,.category_title.cat-1742:before,.category-title.style1 .category-header.cat-1742 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1874 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1874 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1874 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1874.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1874 > a:hover,.post .single_category_title.category-link-1874 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1874 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1874.boxed-link,.category_title.cat-1874:before,.category-title.style1 .category-header.cat-1874 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1746 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1746 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1746 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1746.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1746 > a:hover,.post .single_category_title.category-link-1746 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1746 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1746.boxed-link,.category_title.cat-1746:before,.category-title.style1 .category-header.cat-1746 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-328 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-328 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-328 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-328.active > a,.menu-holder ul li .sub-menu li.menu-item-category-328 > a:hover,.post .single_category_title.category-link-328 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-328 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-328.boxed-link,.category_title.cat-328:before,.category-title.style1 .category-header.cat-328 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1741 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1741 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1741 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1741.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1741 > a:hover,.post .single_category_title.category-link-1741 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1741 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1741.boxed-link,.category_title.cat-1741:before,.category-title.style1 .category-header.cat-1741 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-326 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-326 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-326 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-326.active > a,.menu-holder ul li .sub-menu li.menu-item-category-326 > a:hover,.post .single_category_title.category-link-326 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-326 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-326.boxed-link,.category_title.cat-326:before,.category-title.style1 .category-header.cat-326 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-359 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-359 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-359 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-359.active > a,.menu-holder ul li .sub-menu li.menu-item-category-359 > a:hover,.post .single_category_title.category-link-359 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-359 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-359.boxed-link,.category_title.cat-359:before,.category-title.style1 .category-header.cat-359 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1739 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1739 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1739 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1739.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1739 > a:hover,.post .single_category_title.category-link-1739 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1739 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1739.boxed-link,.category_title.cat-1739:before,.category-title.style1 .category-header.cat-1739 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1770 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1770 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1770 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1770.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1770 > a:hover,.post .single_category_title.category-link-1770 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1770 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1770.boxed-link,.category_title.cat-1770:before,.category-title.style1 .category-header.cat-1770 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-361 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-361 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-361 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-361.active > a,.menu-holder ul li .sub-menu li.menu-item-category-361 > a:hover,.post .single_category_title.category-link-361 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-361 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-361.boxed-link,.category_title.cat-361:before,.category-title.style1 .category-header.cat-361 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1772 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1772 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1772 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1772.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1772 > a:hover,.post .single_category_title.category-link-1772 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1772 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1772.boxed-link,.category_title.cat-1772:before,.category-title.style1 .category-header.cat-1772 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-347 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-347 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-347 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-347.active > a,.menu-holder ul li .sub-menu li.menu-item-category-347 > a:hover,.post .single_category_title.category-link-347 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-347 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-347.boxed-link,.category_title.cat-347:before,.category-title.style1 .category-header.cat-347 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1760 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1760 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1760 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1760.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1760 > a:hover,.post .single_category_title.category-link-1760 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1760 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1760.boxed-link,.category_title.cat-1760:before,.category-title.style1 .category-header.cat-1760 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-398 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-398 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-398 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-398.active > a,.menu-holder ul li .sub-menu li.menu-item-category-398 > a:hover,.post .single_category_title.category-link-398 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-398 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-398.boxed-link,.category_title.cat-398:before,.category-title.style1 .category-header.cat-398 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1747 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1747 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1747 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1747.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1747 > a:hover,.post .single_category_title.category-link-1747 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1747 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1747.boxed-link,.category_title.cat-1747:before,.category-title.style1 .category-header.cat-1747 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-346 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-346 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-346 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-346.active > a,.menu-holder ul li .sub-menu li.menu-item-category-346 > a:hover,.post .single_category_title.category-link-346 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-346 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-346.boxed-link,.category_title.cat-346:before,.category-title.style1 .category-header.cat-346 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1759 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1759 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1759 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1759.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1759 > a:hover,.post .single_category_title.category-link-1759 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1759 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1759.boxed-link,.category_title.cat-1759:before,.category-title.style1 .category-header.cat-1759 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-789 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-789 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-789 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-789.active > a,.menu-holder ul li .sub-menu li.menu-item-category-789 > a:hover,.post .single_category_title.category-link-789 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-789 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-789.boxed-link,.category_title.cat-789:before,.category-title.style1 .category-header.cat-789 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-599 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-599 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-599 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-599.active > a,.menu-holder ul li .sub-menu li.menu-item-category-599 > a:hover,.post .single_category_title.category-link-599 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-599 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-599.boxed-link,.category_title.cat-599:before,.category-title.style1 .category-header.cat-599 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1 > a:hover,.post .single_category_title.category-link-1 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1.boxed-link,.category_title.cat-1:before,.category-title.style1 .category-header.cat-1 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1871 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1871 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1871 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1871.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1871 > a:hover,.post .single_category_title.category-link-1871 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1871 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1871.boxed-link,.category_title.cat-1871:before,.category-title.style1 .category-header.cat-1871 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-1792 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-1792 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1792 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-1792.active > a,.menu-holder ul li .sub-menu li.menu-item-category-1792 > a:hover,.post .single_category_title.category-link-1792 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-1792 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-1792.boxed-link,.category_title.cat-1792:before,.category-title.style1 .category-header.cat-1792 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-379 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-379 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-379 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-379.active > a,.menu-holder ul li .sub-menu li.menu-item-category-379 > a:hover,.post .single_category_title.category-link-379 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-379 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-379.boxed-link,.category_title.cat-379:before,.category-title.style1 .category-header.cat-379 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-381 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-381 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-381 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-381.active > a,.menu-holder ul li .sub-menu li.menu-item-category-381 > a:hover,.post .single_category_title.category-link-381 {color:#222222;}.menu-holder ul.sf-menu > li.menu-item-category-381 > a + .thb_mega_menu_holder {border-color:#222222;}.post .single_category_title.category-boxed-link-381.boxed-link,.category_title.cat-381:before,.category-title.style1 .category-header.cat-381 {background-color:#222222;}.header .menu-holder ul.sf-menu > li.menu-item-category-2018 > a:hover,.menu-holder.style1 ul.sf-menu > li.menu-item-category-2018 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-2018 > a:hover,.menu-holder ul li.menu-item-mega-parent .thb_mega_menu_holder .thb_mega_menu li.menu-item-category-2018.active > a,.menu-holder ul li .sub-menu li.menu-item-category-2018 > a:hover,.post .single_category_title.category-link-2018 {color:#050505;}.menu-holder ul.sf-menu > li.menu-item-category-2018 > a + .thb_mega_menu_holder {border-color:#050505;}.post .single_category_title.category-boxed-link-2018.boxed-link,.category_title.cat-2018:before,.category-title.style1 .category-header.cat-2018 {background-color:#050505;}.widget:not(.widget_singlead) {background-color:#ffffff !important;}[role="main"] .widget.widget_categoryslider .slick-nav {background-color:#ffffff !important;}#subfooter {}@media only screen and (min-width:48.063em) {#subfooter .subfooter-menu-holder .logolink .logoimg {max-height:25px;}}.widget>strong { border-color:#f2f2f2; }.category_title:before { display:none; }.post.blog-post.format-video .post-gallery, .post.blog-post.format-video { background:#fff; }#footer .textwidget { padding-right:20%; }.subheader.fixed .menu-holder .sf-menu li>a { font-weight:500; }
+</style>
+
+<link rel='stylesheet' id='thb-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C500%2C600%2C700%2C900%7CPoppins%3A300%2C400%2C500%2C600%2C700%2C900&#038;subset=latin%2Clatin-ext&#038;ver=4.9.6' type='text/css' media='all' />
+
+<script type='text/javascript' src='https://www.cbronline.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/plugins/essential-grid/public/assets/js/lightbox.js?ver=2.0.9.1'></script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/plugins/essential-grid/public/assets/js/jquery.themepunch.tools.min.js?ver=2.0.9.1'></script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/plugins/essential-grid/public/assets/js/jquery.themepunch.essential.min.js?ver=2.0.9.1'></script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/plugins/sticky-menu-or-anything-on-scroll/assets/js/jq-sticky-anything.min.js?ver=2.0.1'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'></script>
+<![endif]-->
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/plugins/wp-favorite-posts/wpfp.js?ver=4.9.6'></script>
+<link rel='https://api.w.org/' href='https://www.cbronline.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.cbronline.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.cbronline.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.6" />
+<link rel='shortlink' href='https://www.cbronline.com/?p=124790' />
+<link rel="alternate" type="application/json+oembed" href="https://www.cbronline.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cbronline.com%2Fwhat-is%2Fwhat-is-a-url-4934011%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.cbronline.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cbronline.com%2Fwhat-is%2Fwhat-is-a-url-4934011%2F&#038;format=xml" />
+<style>.ms-container { display: none }
+.ms-thumb-frame { opacity: 1.0 }</style>
+<script>var ms_grabbing_curosr = 'https://www.cbronline.com/wp-content/plugins/master-slider/public/assets/css/common/grabbing.cur', ms_grab_curosr = 'https://www.cbronline.com/wp-content/plugins/master-slider/public/assets/css/common/grab.cur';</script>
+<meta name="generator" content="MasterSlider 3.0.1 - Responsive Touch Image Slider | www.avt.li/msf" />
+<!-- premitive -->
+			<script>
+				!function(e,n,t,r,o,i){if(!n){n=n||{},window.permutive=n,n.q=[],n.config=i||{},n.config.projectId=r,n.config.apiKey=o,n.config.environment=n.config.environment||"production";for(var c=["addon","identify","track","trigger","query","segment","segments","ready","on","once","user"],a=0;a<c.length;a++){var s=c[a];n[s]=function(e){return function(){var t=Array.prototype.slice.call(arguments,0);n.q.push({functionName:e,arguments:t})}}(s)}var p=window.Worker?"async":"blocking",g=e.createElement("script");g.type="text/javascript",g.async=!0;var m=("https:"==e.location.protocol?"https://":"http://")+"cdn.permutive.com";g.src=m+"/"+r+"-"+p+".js";var u=e.getElementsByTagName(t)[0];u.parentNode.insertBefore(g,u)}}(document,window.permutive,"script","e82dc6a7-79a5-49b7-b1ed-a89a37f2fe8b","62905692-4299-42af-951f-aa610546b2b1",{});
+				permutive.addon("web", { page: {
+				  article: { id:"124790",title:"What is a URL?" }}});
+			</script>
+				 <!-- end premitive --->
+	 <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.cbronline.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="https://www.cbronline.com/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]--><link rel="amphtml" href="https://www.cbronline.com/what-is/what-is-a-url-4934011/amp/" /><link rel="icon" href="https://www.cbronline.com/wp-content/uploads/2016/09/cbr-icon-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://www.cbronline.com/wp-content/uploads/2016/09/cbr-icon.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.cbronline.com/wp-content/uploads/2016/09/cbr-icon.png" />
+<meta name="msapplication-TileImage" content="https://www.cbronline.com/wp-content/uploads/2016/09/cbr-icon.png" />
+<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+
+ 
+ <!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-18384985-2', 'auto');
+  ga('send', 'pageview');
+
+</script> -->
+
+ 
+ 
+<!-- Ads -->
+
+   
+<meta name="Sector" content="" />
+<meta name="Page" content="124790" />
+<meta name="Category" content="" />
+<!-- AdopStar Ad Code Changes -->
+<script src="/wp-content/themes/goodlife-wp-child/assets/js/uri.js"></script>
+<!-- .AdopStar Ad Code Changes -->
+<script type="text/javascript" data-ng-id="GPT_KVT_TARGET_CODE">
+        try {
+            var i = 0;
+            var arr = [];
+            var META = document.getElementsByTagName("meta");
+            while (i < META.length) {
+
+                if (META[i].name == "Sector") { // checks the meta name
+
+                    arr[0] = META[i].content;
+                    console.log(arr[0]);
+                }
+
+                if (META[i].name == "Page") { // checks the meta name
+                    arr[1] = META[i].content;
+                    console.log(arr[1]);
+                }
+                if (META[i].name == "Category") { // checks the meta name
+                    arr[3] = META[i].content;
+                    console.log(arr[3]);
+                }
+              
+                i++;
+            };
+
+        } catch (err) {
+            console.log("Failed to grab server resources: " + err.name);
+        }
+</script>
+
+
+
+<script type="text/javascript">
+    (function() {
+        var useSSL = 'https:' == document.location.protocol;
+        var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+    })();
+</script>
+
+
+
+<script type='text/javascript'>
+ // Load GPT
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function(){
+   var gads = document.createElement('script');
+   gads.async = true;
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+       '//www.googletagservices.com/tag/js/gpt.js';
+   document.write('<scr' + 'ipt src="' + gads.src + '"></scr' + 'ipt>');
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+   })();
+</script>
+<script type="text/javascript">
+   googletag.cmd.push(function() {
+   googletag.pubads().set("adsense_background_color", "F2F2F2");
+  });
+</script>
+
+
+
+
+
+
+
+
+<script type='text/javascript'>
+
+
+var mappingLeaderboard = googletag.sizeMapping()
+
+   .addSize ([1,1], [[728,90], [970,250]])
+
+   .addSize([980, 600], [[728, 90], [970, 250]])
+    
+    .addSize([500, 500], [320, 50])
+   
+    .addSize([1, 1], [320, 50])
+   
+    .build();
+
+var mappingMPU = googletag.sizeMapping()
+    
+    .addSize([1024, 768], [[300, 250], [300, 600]])
+    
+    .addSize([500, 500], [300, 250])
+   
+    .addSize([1, 1], [300, 250])
+   
+    .build();
+
+var mappingSky = googletag.sizeMapping()
+    
+    .addSize([1024, 768], [160, 600])
+    
+    .addSize([500, 500], [160, 600])
+   
+    .addSize([1, 1], [])
+   
+    .build();
+    
+var mappingOutOfPage = googletag.sizeMapping()
+    
+    .addSize([1024, 768], [1, 1])
+    
+    .addSize([500, 500], [])
+   
+    .addSize([1, 1], [])
+   
+    .build();
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+        googletag.pubads().enableAsyncRendering();
+        googletag.defineSlot('/3553/CBR_New_Tags/CBR_OutOfPage', [1, 1], 'div-gpt-ad-1364304769881-0').addService(googletag.pubads());
+        googletag.defineOutOfPageSlot('/3553/CBR_New_Tags/CBR_OutOfPage', 'div-gpt-ad-1364304769881-0-oop').addService(googletag.pubads());
+
+        slot9 = googletag.defineSlot('/3553/CBR_New_Tags/CBR_Top_Leader', [[728, 90], [970, 250]], 'leaderboard').defineSizeMapping(mappingLeaderboard).addService(googletag.pubads());
+        slot12 = googletag.defineSlot('/3553/CBR_New_Tags/CBR_Top_Leader', [[728, 90], [970, 250]], 'leaderboard1').defineSizeMapping(mappingLeaderboard).addService(googletag.pubads());
+
+        slot1 = googletag.defineSlot('/3553/CBR_New_Tags/CBR_Top_MPU', [[300, 250], [300, 600]], 'div-gpt-ad-1364304769881-2').addService(googletag.pubads());
+        slot2 = googletag.defineSlot('/3553/CBR_New_Tags/CBR_TOP_LEADER_OVERLAY', [[728, 90], [970, 250], [320, 50]], 'div-gpt-ad-1468593188950-0').addService(googletag.pubads());
+        slot3 = googletag.defineSlot('/3553/CBR_New_Tags/CBR_TOP_MPU_OVERLAY', [[300, 600], [300, 250]], 'div-gpt-ad-1468593188950-1').addService(googletag.pubads());
+        slot4 = googletag.defineSlot('/3553/CBR_New_Tags/CBR_Bottom_MPU', [[300, 600], [300, 250]], 'div-gpt-ad-1486735554119-0').addService(googletag.pubads());
+        googletag.enableServices();
+
+
+        if (typeof arr[1] !== 'undefined') { googletag.pubads().setTargeting('Page', arr[1]); }
+        if (typeof arr[0] !== 'undefined') { googletag.pubads().setTargeting('Sector', arr[0]); }
+        if (typeof arr[3] !== 'undefined') { googletag.pubads().setTargeting('Category', arr[3]); }
+       
+
+
+
+        // AdopStar Ad Code Changes
+
+        try {
+
+            var validation = uriquery.includes("trend");
+            if (validation == true) {
+                generateHeaders();
+                generateStandardTargeting();
+                generateExtendedTargeting();
+                getArrayForStdTargeting();
+            } else {
+                generateStandardTargeting();
+                getArrayForStdTargeting();
+                console.log("Default Trigger for Key Value Targeting");
+            }
+
+        } catch (err) {
+            console.log("Failed to grab server resources: " + err.name);
+        }
+
+
+        googletag.pubads().collapseEmptyDivs();
+        googletag.pubads().enableSyncRendering();
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+    </script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '170891223452566'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=170891223452566&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<script>
+jQuery(document).ready(function() {
+	//alert(1);
+	jQuery("div.question-1" ).prepend('<label>'+ jQuery('#question-1').val()+'</label>');
+	jQuery("div.question-2" ).prepend('<label>'+ jQuery('#question-2').val()+'</label>');
+	jQuery("div.question-3" ).prepend('<label>'+ jQuery('#question-3').val()+'</label>');
+});
+</script>
+
+
+
+ <script src="https://www.cbronline.com/wp-content/themes/goodlife-wp/assets/js/jquery-eu-cookie-law-popup.js"></script>
+
+
+</head>
+<body class="post-template-default single single-post postid-124790 single-format-standard _masterslider _ms_version_3.0.1 lazy-load-off wpb-js-composer js-comp-ver-4.11.2 vc_responsive" data-themeurl="https://www.cbronline.com/wp-content/themes/goodlife-wp">
+<div class="eupopup eupopup-bottom"></div>
+
+
+<script>
+
+	// AdopStar Ad Code Changes on 09-07-2017
+	
+	// AdopStar Ad Code Changes
+        try {           
+            var validation = uriquery.includes("trend");
+            if (validation == true) {
+                
+				generateFrameBody();
+				window.onbeforeunload = warning; // priorToUnload;
+				window.onunload = noTimeout;
+			} else {
+				console.log("false");
+			}
+		} catch (err) {
+			console.log("Failed to grab server resources: " + err.name);
+		}
+</script>
+
+<div id="wrapper" class="open">
+
+	<!-- Start Mobile Menu -->
+			<nav id="mobile-menu">
+			<div class="custom_scroll" id="menu-scroll">
+				<div>
+										  <ul id="menu-navigation" class="mobile-menu"><li id="menu-item-300652" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-300652 menu-item-category-4075"><a href="https://www.cbronline.com/emerging-technology/">Emerging Technology</a></li>
+<li id="menu-item-745" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-745 menu-item-category-316"><a href="https://www.cbronline.com/cloud/">Cloud</a></li>
+<li id="menu-item-740" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-740 menu-item-category-315"><a href="https://www.cbronline.com/internet-of-things/">IOT</a></li>
+<li id="menu-item-270229" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-270229 menu-item-category-779"><a href="https://www.cbronline.com/cybersecurity/">Cyber Security</a></li>
+<li id="menu-item-768" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-768 menu-item-category-320"><a href="https://www.cbronline.com/big-data/">Big Data</a></li>
+<li id="menu-item-770" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-770 menu-item-category-321"><a href="https://www.cbronline.com/enterprise-it/">Enterprise IT</a></li>
+<li id="menu-item-300658" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-300658 menu-item-category-4083"><a href="https://www.cbronline.com/industry/">Industry</a></li>
+<li id="menu-item-300657" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-300657 menu-item-category-4087"><a href="https://www.cbronline.com/boardroom/">Boardroom</a></li>
+<li id="menu-item-302361" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-302361"><a href="https://www.cbronline.com/video-vault/">Video</a></li>
+<li id="menu-item-274508" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-274508"><a href="https://www.cbronline.com/white-papers/"><span><i class="fa fa-plus"></i></span>White Papers</a>
+<ul class="sub-menu">
+	<li id="menu-item-293817" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-293817"><a href="https://www.cbronline.com/white-papers/">English</a></li>
+	<li id="menu-item-293818" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-293818"><a href="https://www.cbronline.com/white-papers-fr/">French</a></li>
+	<li id="menu-item-305952" class=" menu-item menu-item-type-taxonomy menu-item-object-category menu-item-305952 menu-item-category-2019"><a href="https://www.cbronline.com/white-papers-de/">German</a></li>
+</ul>
+</li>
+</ul>																<ul id="menu-top-menu" class="mobile-menu secondary"><li id="menu-item-270519" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-270519 menu-item-category-379"><a rel="nofollow" href="https://www.cbronline.com/what-is/">What Is</a></li>
+<li id="menu-item-923" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-923"><a rel="nofollow" href="https://www.cbronline.com/about-us/">About Us</a></li>
+<li id="menu-item-270579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-270579"><a rel="nofollow" href="https://www.cbronline.com/editorial-team/">Editorial Team</a></li>
+<li id="menu-item-924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-924"><a rel="nofollow" href="https://www.cbronline.com/advertise-with-us/">Advertise With Us</a></li>
+<li id="menu-item-925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-925"><a rel="nofollow" href="https://www.cbronline.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-926"><a rel="nofollow" href="https://www.cbronline.com/help/">Help</a></li>
+<li id="menu-item-309852" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309852"><a href="http://www.compelo.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-928"><a rel="nofollow" href="https://www.cbronline.com/rss-feeds/">RSS Feeds</a></li>
+<li id="menu-item-929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-929"><a rel="nofollow" href="https://www.cbronline.com/site-map/">Site Map</a></li>
+<li id="menu-item-274502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274502"><a rel="nofollow" href="https://www.cbronline.com/white-papers/">White Papers</a></li>
+<li id="menu-item-307052" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307052"><a href="https://www.cbronline.com/terms-and-conditions/">T&#038;C&#8217;s</a></li>
+<li id="menu-item-307053" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307053"><a href="https://www.cbronline.com/gdpr/">GDPR</a></li>
+</ul>										<div class="social-links">
+								<a href="#" class="facebook icon-1x" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="#" class="twitter icon-1x" target="_blank"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="google-plus icon-1x" target="_blank"><i class="fa fa-google-plus"></i></a>
+														</div>
+					<div class="menu-footer">
+											</div>
+				</div>
+			</div>
+		</nav>
+		<!-- End Mobile Menu -->
+
+	<!-- Start Content Container -->
+	<section id="content-container">
+		<!-- Start Content Click Capture -->
+		<div class="click-capture"></div>
+		<!-- End Content Click Capture -->
+		<!-- Start Fixed Header -->
+<div class="subheader fixed show-for-large-up dark">
+	
+		<div class="row full-width-row">
+
+			<div class="small-12 large-1 columns logo small-only-text-center">
+				<div>
+								<a href="https://www.cbronline.com/" class="logolink">
+					<img src="https://www.cbronline.com/wp-content/uploads/2016/06/cbr-logo-2.png" class="logoimg" alt="Computer Business Review"/>
+				</a>
+				</div>
+			</div>
+			<div class="large-9 columns">
+				<nav class="menu-holder">
+										  <ul id="menu-navigation-1" class="sf-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-300652 menu-item-category-4075"><a href="https://www.cbronline.com/emerging-technology/">Emerging Technology</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-745 menu-item-category-316"><a href="https://www.cbronline.com/cloud/">Cloud</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-740 menu-item-category-315"><a href="https://www.cbronline.com/internet-of-things/">IOT</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-270229 menu-item-category-779"><a href="https://www.cbronline.com/cybersecurity/">Cyber Security</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-768 menu-item-category-320"><a href="https://www.cbronline.com/big-data/">Big Data</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-770 menu-item-category-321"><a href="https://www.cbronline.com/enterprise-it/">Enterprise IT</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-300658 menu-item-category-4083"><a href="https://www.cbronline.com/industry/">Industry</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-300657 menu-item-category-4087"><a href="https://www.cbronline.com/boardroom/">Boardroom</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-302361"><a href="https://www.cbronline.com/video-vault/">Video</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-274508"><a href="https://www.cbronline.com/white-papers/">White Papers</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293817"><a href="https://www.cbronline.com/white-papers/">English</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293818"><a href="https://www.cbronline.com/white-papers-fr/">French</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-305952 menu-item-category-2019"><a href="https://www.cbronline.com/white-papers-de/">German</a></li>
+</ul>
+</li>
+<li class="astm-search-menu default"><!-- Start SearchForm -->
+<form method="get" class="searchform" role="search" action="https://www.cbronline.com/">
+    <fieldset>
+    	<input name="s" type="text" placeholder="Search" class="s">
+    	<input type="submit" value="Search">
+    </fieldset>
+</form>
+<!-- End SearchForm --></li></ul>									</nav>
+			</div>
+			<div class="large-2 columns">
+				<ul class="sf-menu right-menu text-right">
+					<li class="menu-item-has-children">
+		<a href="#">Follow Us</a>
+		<ul class="sub-menu">
+			<!--
+						<li><a href="#" class="facebook icon-1x" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+												<li><a href="#" class="twitter icon-1x" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+																								<li><a href="#" class="google-plus icon-1x" target="_blank"><i class="fa fa-google-plus"></i> Google Plus</a></li>
+																											-->
+
+			<li><a href="https://www.facebook.com/cbronline/" class="facebook icon-1x" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+			<li><a href="https://twitter.com/cbronline" class="twitter icon-1x" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+			<li><a href="https://plus.google.com/107320569931932704012" class="google-plus icon-1x" target="_blank"><i class="fa fa-google-plus"></i> Google Plus</a></li>
+
+		</ul>
+	</li>
+											<li>	<div class="quick_search">
+		<a href="#" class="quick_toggle"></a>
+		<svg version="1.1" class="quick_search_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 -1 20 18" xml:space="preserve">
+			<path d="M18.96,16.896l-4.973-4.926c1.02-1.255,1.633-2.846,1.633-4.578c0-4.035-3.312-7.317-7.385-7.317S0.849,3.358,0.849,7.393
+				c0,4.033,3.313,7.316,7.386,7.316c1.66,0,3.188-0.552,4.422-1.471l4.998,4.95c0.181,0.179,0.416,0.268,0.652,0.268
+				c0.235,0,0.472-0.089,0.652-0.268C19.32,17.832,19.32,17.253,18.96,16.896z M2.693,7.393c0-3.027,2.485-5.489,5.542-5.489
+				c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.693,10.419,2.693,7.393z"/>
+		</svg>
+		<!-- Start SearchForm -->
+<form method="get" class="searchform" role="search" action="https://www.cbronline.com/">
+    <fieldset>
+    	<input name="s" type="text" placeholder="Search" class="s">
+    	<input type="submit" value="Search">
+    </fieldset>
+</form>
+<!-- End SearchForm -->	</div>
+	
+</li>				</ul>
+			</div>
+		</div>
+
+
+<!--
+<div id="fixed-top-leaderboard" class="top-leaderboard" >
+	<img src="http://go.clicksoftware.com/rs/clicksoftware/images/banner_achievements_center_965x274.jpg" />
+	<div id="close-top-leaderboard"><i class="fa fa-times" aria-hidden="true"></i> Close</div>
+</div>
+-->
+
+</div>
+<!-- End Fixed Header -->
+
+
+
+
+
+
+
+<!-- Start Sub Header -->
+<div class="subheader show-for-large-up dark ">
+	<div class="row full-width-row">
+		<div class="small-12 medium-6 large-9 columns">
+			<nav class="subheader-menu">
+							</nav>
+		</div>
+		<div class="small-12 medium-6 large-3 columns text-right">
+		</div>
+	</div>
+</div>
+<!-- End Sub Header -->
+<!-- Start Header -->
+<div class="article-particles" id="particles-js"></div>
+<script>
+jQuery(document).ready(function() {
+
+	jQuery(document).ready(function() {
+	  jQuery('#prevNextButtons').width(jQuery('#prevNextButtons').parent().width());
+	});
+
+	jQuery(".next").hover(function(){
+			jQuery("#next-content").animate({ right: 0, opacity:1 });
+			jQuery(this).find('.arrow').css("background-color", "#0872d2");
+		}, function(){
+			jQuery("#next-content").animate({ right: -340, opacity:0 });
+			jQuery(this).find('.arrow').css("background-color", "rgb(242,242,242)");
+		}); 
+
+	jQuery(".previous").hover(function(){
+			jQuery("#prev-content").animate({ left: 30, opacity:1 });
+			jQuery(this).find('.arrow').css("background-color", "#0872d2");
+		}, function(){
+			jQuery("#prev-content").animate({ left: -340, opacity:0 });
+			jQuery(this).find('.arrow').css("background-color", "rgb(242,242,242)");
+		}); 
+}); 
+</script>
+
+
+<script>
+jQuery(document).ready(function(e) {
+
+	var alain=0;
+
+	 setTimeout(function() {
+        jQuery("#fixed-leaderboard").removeClass("intro_sticky_hd");
+        jQuery('.dmpu').removeClass("mpu_padding_large");
+        alain=1;
+	  }, 10000);
+
+    var WindowHeight = jQuery(window).height();
+    var load_element = 0;
+    //position of element
+    var scroll_position = jQuery('#fixed-leaderboard').offset().top;
+    var screen_height = jQuery(window).height();
+    var activation_offset = 0;
+    var max_scroll_height = jQuery('body').height() + screen_height;
+    var scroll_activation_point = scroll_position - (screen_height * activation_offset);
+
+    jQuery(window).on('scroll', function(e) {
+
+        var y_scroll_pos = window.pageYOffset;
+        var element_in_view = y_scroll_pos > scroll_activation_point;
+		if (y_scroll_pos>=100 && alain==0) {
+			var test=jQuery('.intro_sticky_hd').height();
+            jQuery('#fixed-leaderboard').addClass("intro_sticky_hd");
+            jQuery('#fixed-leaderboard').removeClass("outro_sticky_hd");
+            ////  add here 3rd class for sidebar
+
+            if(test >150){
+            	jQuery('.dmpu').addClass("mpu_padding_large");
+            	jQuery('.dmpu').removeClass("mpu_padding_small");
+
+            }else{
+            	jQuery('.dmpu').addClass("mpu_padding_small");
+            	jQuery('.dmpu').removeClass("mpu_padding_large");
+            }
+           
+            jQuery('#fixed-leaderboard').hasClass("intro_sticky_hd");
+            //
+        }else{   
+            // top of the page 
+        	jQuery('#fixed-leaderboard').addClass("outro_sticky_hd");
+            jQuery('#fixed-leaderboard').removeClass("intro_sticky_hd");
+            jQuery('#fixed-leaderboard').hasClass("outro_sticky_hd");
+            jQuery('.dmpu').addClass("mpu_padding_gone");
+        }
+
+
+        });
+
+});
+
+</script>
+
+<header id="fixed-leaderboard"  class="header  style1  dark" role="banner">
+	<div class="row">
+		<div class="small-2 columns text-left mobile-icon-holder">
+			<a href="#" data-target="open-menu" class="mobile-toggle"><i class="fa fa-bars"></i></a>
+		</div>
+		<div class="small-8 large-2 columns logo">
+			<div>
+								<a href="https://www.cbronline.com/" class="logolink">
+					<img src="https://www.cbronline.com/wp-content/uploads/2016/06/cbr-logo-2.png" class="logoimg" alt="Computer Business Review"/>
+				</a>
+			</div>
+		</div>
+		<div class="small-12 large-10 columns thb-a">
+						<div id="leaderboard">
+			
+				<script>
+				googletag.cmd.push(function() {
+				googletag.display('leaderboard');
+				});
+				</script>
+				<img src="https://cbrleaderboardcontainer.blob.core.windows.net/pixel/8Viri.png" id="LeaderBoardtracker" height="1" width="1" />  
+			</div>
+		</div>
+		<div class="small-2 columns text-right mobile-share-holder">
+			<div>
+				<div class="quick_search">
+		<a href="#" class="quick_toggle"></a>
+		<svg version="1.1" class="quick_search_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 -1 20 18" xml:space="preserve">
+			<path d="M18.96,16.896l-4.973-4.926c1.02-1.255,1.633-2.846,1.633-4.578c0-4.035-3.312-7.317-7.385-7.317S0.849,3.358,0.849,7.393
+				c0,4.033,3.313,7.316,7.386,7.316c1.66,0,3.188-0.552,4.422-1.471l4.998,4.95c0.181,0.179,0.416,0.268,0.652,0.268
+				c0.235,0,0.472-0.089,0.652-0.268C19.32,17.832,19.32,17.253,18.96,16.896z M2.693,7.393c0-3.027,2.485-5.489,5.542-5.489
+				c3.054,0,5.541,2.462,5.541,5.489c0,3.026-2.486,5.489-5.541,5.489C5.179,12.882,2.693,10.419,2.693,7.393z"/>
+		</svg>
+		<!-- Start SearchForm -->
+<form method="get" class="searchform" role="search" action="https://www.cbronline.com/">
+    <fieldset>
+    	<input name="s" type="text" placeholder="Search" class="s">
+    	<input type="submit" value="Search">
+    </fieldset>
+</form>
+<!-- End SearchForm -->	</div>
+	
+			</div>
+		</div>
+	</div>
+</header>
+<!-- End Header -->
+<div id="navholder" class="dark-menu ">
+	<div class="row">
+		<div class="small-12 columns">
+			<nav class="menu-holder style1 dark" id="menu_width">
+				<ul id="menu-navigation-2" class="sf-menu style1"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-300652 menu-item-category-4075"><a href="https://www.cbronline.com/emerging-technology/">Emerging Technology</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-745 menu-item-category-316"><a href="https://www.cbronline.com/cloud/">Cloud</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-740 menu-item-category-315"><a href="https://www.cbronline.com/internet-of-things/">IOT</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-270229 menu-item-category-779"><a href="https://www.cbronline.com/cybersecurity/">Cyber Security</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-768 menu-item-category-320"><a href="https://www.cbronline.com/big-data/">Big Data</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-770 menu-item-category-321"><a href="https://www.cbronline.com/enterprise-it/">Enterprise IT</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-300658 menu-item-category-4083"><a href="https://www.cbronline.com/industry/">Industry</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-300657 menu-item-category-4087"><a href="https://www.cbronline.com/boardroom/">Boardroom</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-302361"><a href="https://www.cbronline.com/video-vault/">Video</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-274508"><a href="https://www.cbronline.com/white-papers/">White Papers</a>
+
+
+<ul class="sub-menu ">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293817"><a href="https://www.cbronline.com/white-papers/">English</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293818"><a href="https://www.cbronline.com/white-papers-fr/">French</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-305952 menu-item-category-2019"><a href="https://www.cbronline.com/white-papers-de/">German</a></li>
+</ul>
+</li>
+<li class="astm-search-menu default"><!-- Start SearchForm -->
+<form method="get" class="searchform" role="search" action="https://www.cbronline.com/">
+    <fieldset>
+    	<input name="s" type="text" placeholder="Search" class="s">
+    	<input type="submit" value="Search">
+    </fieldset>
+</form>
+<!-- End SearchForm --></li></ul>									<div class="secondary-holder">
+						<a href="#" title="Secondary Menu" class="secondary-toggle"><i class="fa fa-bars"></i></a>
+						<ul id="menu-top-menu-1" class="sf-menu style1 secondary"><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-270519 menu-item-category-379"><a rel="nofollow" href="https://www.cbronline.com/what-is/">What Is</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-923"><a rel="nofollow" href="https://www.cbronline.com/about-us/">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-270579"><a rel="nofollow" href="https://www.cbronline.com/editorial-team/">Editorial Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-924"><a rel="nofollow" href="https://www.cbronline.com/advertise-with-us/">Advertise With Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-925"><a rel="nofollow" href="https://www.cbronline.com/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-926"><a rel="nofollow" href="https://www.cbronline.com/help/">Help</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309852"><a href="http://www.compelo.com/privacy-policy/">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-928"><a rel="nofollow" href="https://www.cbronline.com/rss-feeds/">RSS Feeds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-929"><a rel="nofollow" href="https://www.cbronline.com/site-map/">Site Map</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274502"><a rel="nofollow" href="https://www.cbronline.com/white-papers/">White Papers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307052"><a href="https://www.cbronline.com/terms-and-conditions/">T&#038;C&#8217;s</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307053"><a href="https://www.cbronline.com/gdpr/">GDPR</a></li>
+</ul>					</div>
+							</nav>
+		</div>
+	</div>
+</div>
+
+		
+		<div role="main" class="">
+
+<div id="infinite-article" data-infinite="off" class="off">
+
+			
+													<script>jQuery(document.body).addClass('single-whatis');</script>
+				
+				
+
+
+<div class="row post-detail-row" data-equal=">.columns" data-row-detection="true">
+
+<div class="row whatis-header">
+
+      <header class="post-title entry-header">
+        <aside class="post-category"><a href="https://www.cbronline.com/what-is/" class="single_category_title category-link-379" title="What Is">What Is</a></aside>
+        <h1 class="entry-title" itemprop="name headline">What is a URL?</h1>
+                    <time class="time" datetime="2018-07-24T04:36:51+00:00" itemprop="datePublished" content="2018-07-24T04:36:51+00:00">24th July 2018</time>
+         
+                                <!--   <strong class="guest-author">-->
+                <!-- </strong>-->
+        
+
+
+      </header>
+
+</div>
+
+
+<!--Article Start -->
+
+<div class="row post-detail-row top-padding what-is-page" data-equal=">.columns" data-row-detection="true">
+
+  <div class="small-12 medium-8 columns whatis-notop">
+<div class="row">
+  <a href="https://www.cbronline.com/what-is/what-is-wi-fi-4933642/" rel="prev"><span class="next">Next What is </span></a></div>
+        <div class="pagelink cf ">
+          </div>
+
+
+
+
+
+    <!-- .pagelink -->
+    
+
+
+    <div class="small-12 medium-5 columns" id="whatis-image" style="float: right; padding-left: 1em;">
+
+          <figure class="post-gallery">
+
+            <img width="770" height="503" src="https://www.cbronline.com/wp-content/uploads/2016/06/what-is-URL-770x503.jpg" class="attachment-goodlife-post-style1 size-goodlife-post-style1 wp-post-image" alt="what is URL" itemprop="image" srcset="https://www.cbronline.com/wp-content/uploads/2016/06/what-is-URL-770x503.jpg 770w, https://www.cbronline.com/wp-content/uploads/2016/06/what-is-URL-768x502.jpg 768w, https://www.cbronline.com/wp-content/uploads/2016/06/what-is-URL-1024x669.jpg 1024w" sizes="(max-width: 770px) 100vw, 770px" />
+            
+          </figure>
+
+    </div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post blog-post post-124790 type-post status-publish format-standard has-post-thumbnail hentry category-what-is" id="post-124790" role="article" data-id="124790" data-url="https://www.cbronline.com/what-is/what-is-a-url-4934011/">
+
+      <div class="post-content entry-content cf whatis-article">
+
+            
+            <div class="pps-wrap-content"><div class="pps-the-content pps-first-slide"><nav class="pps-slider-nav pps-clearfix"><a href="https://www.cbronline.com/what-is/what-is-a-url-4934011/2/"><span class="pps-next">Next</span></a><span class="pps-slide-count">1 of 2</span></nav><div class="pps-content pps-clearfix"><p>A URL is commonly known as a web address, with the acronym standing for Uniform Recourse Locater.</p>
+<p>A URL is normally displayed in the address bar at the top of a browser, with a typical URL being shown in the following format: http://www.cbronline.com.</p>
+<p>Technically, it is a web resource that specifies its location on a computer network. essentially corresponds to a file&#8217;s unique address which is available on the internet.</p>
+<p>URLs are part of the uniform resource identifier (URI) portfolio, which is a set of characters used to give resources an identification. A URL is typically made up two main components &#8211; these are usually &#8216;http&#8217;, which is known as the protocol identifier, and &#8216;cbronline.com&#8217;, which is know as the resource name.</p>
+<p>&nbsp;</p>
+<h5>Which Knight of the realm first defined URLs?</h5>
+</div><nav class="pps-slider-nav pps-bottom-nav pps-clearfix"><a href="https://www.cbronline.com/what-is/what-is-a-url-4934011/2/"><span class="pps-next">Next</span></a><span class="pps-slide-count">1 of 2</span></nav></div></div>
+            <div class="what-is-facts">
+              
+              
+              
+              
+              
+              
+
+
+              
+              <!--start here-->
+              <div class="whatis7">
+                        <h3>Name of Technology:</h3>
+                        <p>
+                        URL
+                        </p>
+                      </div>
+              <div class="whatis7">
+                        <h3>Year Introduced:</h3>
+                        <p>
+                        1994
+                        </p>
+                      </div>
+              <div class="whatis7">
+                        <h3>Invented by :</h3>
+                        <p>
+                        Sir Tim Berners-Lee,  Internet Engineering Task Force
+                        </p>
+                      </div>
+              
+              <div class="whatis7">
+                        <h3>Main technology category:</h3>
+                        <p>
+                        Internet
+                        </p>
+                      </div>
+              
+              
+              
+              
+              
+              
+              <!--End here-->
+
+            </div>
+
+            
+            <div class="pagelink cf ">
+
+                          </div>
+            <!-- .pagelink -->
+            
+            <div role="form" class="wpcf7" id="wpcf7-f270573-p124790-o1" lang="en-GB" dir="ltr">
+<div class="screen-reader-response"></div>
+<form action="/what-is/what-is-a-url-4934011/#wpcf7-f270573-p124790-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="270573" />
+<input type="hidden" name="_wpcf7_version" value="5.0.2" />
+<input type="hidden" name="_wpcf7_locale" value="en_GB" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f270573-p124790-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="124790" />
+</div>
+<p><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="ENTER YOUR EMAIL ADDRESS" /></span><input type="submit" value="Subscribe" class="wpcf7-form-control wpcf7-submit" /></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
+          </div>
+
+          
+          			<div class="row post-navi hide-on-print no-padding" data-equal=">.columns">
+				<div class="small-12 medium-6 columns">
+					<span>Previous Article</span><a href="https://www.cbronline.com/enterprise-it/what-are-cookies-4933709/" title="What are cookies?">What are cookies?</a>				</div>
+				<div class="small-12 medium-6 columns">
+					<span>Next Article</span><a href="https://www.cbronline.com/what-is/what-is-a-ceo-4934175/" title="What is a CEO?">What is a CEO?</a>				</div>
+			</div>
+		                                  <div class="row">
+              <div class="small-12 columns">
+                <!-- Start Related Posts -->
+
+<aside class="latest-4threvolution related-posts cf hide-on-print" style="margin-bottom: 300px;">
+	<h4 class="related-title">Related</h4>
+	<div class="row">
+      <div class="small-12 medium-12 large-4 columns">
+    	<article itemscope itemtype="http://schema.org/Article" class="post style1 solo post-290310 type-post status-publish format-standard has-post-thumbnail hentry category-what-is tag-google tag-google-now tag-what-is" role="article">
+		<figure class="post-gallery"> 
+		<a href="https://www.cbronline.com/what-is/what-is-google-now/" rel="bookmark" title="What is Google Now?">
+			<img width="570" height="300" src="https://www.cbronline.com/wp-content/uploads/2017/04/google-now-570x300.png" class="attachment-goodlife-latest-short size-goodlife-latest-short wp-post-image" alt="Google Now" itemprop="image" />					</a>
+	</figure>
+		<aside class="post-category"><a href="https://www.cbronline.com/what-is/" class="single_category_title category-link-379" title="What Is">What Is</a></aside>
+	<header class="post-title entry-header">
+		<h6 class="entry-title" itemprop="name headline"><a href="https://www.cbronline.com/what-is/what-is-google-now/" title="What is Google Now?">What is Google Now?</a></h6>	</header>
+		<aside class="post-bottom-meta">
+		
+		<!--<strong rel="author" itemprop="author" class="hide"></strong>-->
+		
+		<span class="hide" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+			<meta itemprop="name" content="Computer Business Review">
+			<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="https://www.cbronline.com/wp-content/uploads/2016/06/cbr-logo-2.png">
+			</span>
+			
+		</span>
+		<span class="hide" itemprop="dateModified" content="July 10, 2017 12:18 pm">
+		</span>
+			
+		</span>
+		
+		<time class="time hide" datetime="2017-04-21T15:35:34+00:00" itemprop="datePublished" content="2017-04-21T15:35:34+00:00">21st April 2017</time>
+
+	</aside>
+	</article>
+    </div>
+      <div class="small-12 medium-12 large-4 columns">
+    	<article itemscope itemtype="http://schema.org/Article" class="post style1 solo post-125876 type-post status-publish format-standard has-post-thumbnail hentry category-what-is" role="article">
+		<figure class="post-gallery"> 
+		<a href="https://www.cbronline.com/what-is/what-is-change-management-4953928/" rel="bookmark" title="What is change management?">
+			<img width="570" height="300" src="https://www.cbronline.com/wp-content/uploads/2016/09/networks-570x300.png" class="attachment-goodlife-latest-short size-goodlife-latest-short wp-post-image" alt="change management" itemprop="image" />					</a>
+	</figure>
+		<aside class="post-category"><a href="https://www.cbronline.com/what-is/" class="single_category_title category-link-379" title="What Is">What Is</a></aside>
+	<header class="post-title entry-header">
+		<h6 class="entry-title" itemprop="name headline"><a href="https://www.cbronline.com/what-is/what-is-change-management-4953928/" title="What is change management?">What is change management?</a></h6>	</header>
+		<aside class="post-bottom-meta">
+		
+		<!--<strong rel="author" itemprop="author" class="hide"></strong>-->
+		
+		<span class="hide" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+			<meta itemprop="name" content="Computer Business Review">
+			<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="https://www.cbronline.com/wp-content/uploads/2016/06/cbr-logo-2.png">
+			</span>
+			
+		</span>
+		<span class="hide" itemprop="dateModified" content="April 19, 2017 4:59 pm">
+		</span>
+			
+		</span>
+		
+		<time class="time hide" datetime="2017-04-19T16:30:00+00:00" itemprop="datePublished" content="2017-04-19T16:30:00+00:00">19th April 2017</time>
+
+	</aside>
+	</article>
+    </div>
+      <div class="small-12 medium-12 large-4 columns">
+    	<article itemscope itemtype="http://schema.org/Article" class="post style1 solo post-125733 type-post status-publish format-standard has-post-thumbnail hentry category-what-is" role="article">
+		<figure class="post-gallery"> 
+		<a href="https://www.cbronline.com/what-is/what-is-cgi-4951536/" rel="bookmark" title="What is CGI?">
+			<img width="570" height="300" src="https://www.cbronline.com/wp-content/uploads/2017/03/connected-car-570x300.png" class="attachment-goodlife-latest-short size-goodlife-latest-short wp-post-image" alt="CGI" itemprop="image" />					</a>
+	</figure>
+		<aside class="post-category"><a href="https://www.cbronline.com/what-is/" class="single_category_title category-link-379" title="What Is">What Is</a></aside>
+	<header class="post-title entry-header">
+		<h6 class="entry-title" itemprop="name headline"><a href="https://www.cbronline.com/what-is/what-is-cgi-4951536/" title="What is CGI?">What is CGI?</a></h6>	</header>
+		<aside class="post-bottom-meta">
+		
+		<!--<strong rel="author" itemprop="author" class="hide"></strong>-->
+		
+		<span class="hide" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+			<meta itemprop="name" content="Computer Business Review">
+			<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="https://www.cbronline.com/wp-content/uploads/2016/06/cbr-logo-2.png">
+			</span>
+			
+		</span>
+		<span class="hide" itemprop="dateModified" content="April 19, 2017 4:21 pm">
+		</span>
+			
+		</span>
+		
+		<time class="time hide" datetime="2017-04-19T16:20:00+00:00" itemprop="datePublished" content="2017-04-19T16:20:00+00:00">19th April 2017</time>
+
+	</aside>
+	</article>
+    </div>
+    </div>
+</aside>
+
+<div class="fixed_breakpoint"></div>
+
+<!-- End Related Posts -->
+              </div>
+            </div>
+                      
+
+      
+
+      
+
+    </article>
+
+
+    
+      <!-- Start #comments -->
+<section id="comments" class="cf">
+
+
+	<a href="#" id="comment-toggle">Comments <span>(0)</span></a>
+	<div class="comment-content-container">
+		
+
+
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/what-is/what-is-a-url-4934011/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.cbronline.com/wp-comments-post.php" method="post" id="form-comment" class="comment-form">
+				<p class="comment-notes">Your email address will not be published. Required fields are marked *</p><div class="row"><div class="small-12 columns"><label>Your Comment</label><textarea name="comment" id="comment" aria-required="true" data-required="true" rows="10" cols="58"></textarea></div></div><div class="row"><div class="small-12 medium-6 columns"><label>Name <span>*</span></label><input id="author" name="author" type="text" value="" size="30" aria-required="true" data-required="true" /></div>
+<div class="small-12 medium-6 columns"><label>Email <span>*</span></label><input id="email" name="email" type="text" value="" size="30" aria-required="true" data-required="true" /></div>
+<div class="small-12 columns"><label>Website</label><input name="url" size="30" id="url" value="" type="text" /></div></div>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="black" value="Submit Comment" /> <input type='hidden' name='comment_post_ID' value='124790' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+	</div>
+</section>
+<!-- End #comments -->
+
+    
+  </div>
+
+ <aside class="sidebar small-12 medium-4 columns equal blah" role="complementary">
+    <div class="fixed-paginated-sidebar-ad sidebar_inner dmpu">
+            <div id="thb_singlead_widget-19" class="widget cf widget_singlead"><div id="div-gpt-ad-1364304769881-2">
+<script type="text/javascript">
+    googletag.display('div-gpt-ad-1364304769881-2');
+</script>
+</div></div>    </div>
+  </aside>
+</div>
+<!-- .row -->
+
+
+  
+  <div class="row">
+
+    <div class="small-12 columns">
+
+      
+    </div>
+
+  </div>
+
+  
+	</div>
+	
+
+
+
+	</div><!-- End role["main"] -->
+
+
+
+
+
+
+
+						<!-- Start Sub Footer -->
+			<footer id="subfooter" role="contentinfo" class="dark ">
+				<div class="row">
+					<div class="small-12 columns">
+						<div class="subfooter-menu-holder text-center">
+														<div class="subfooter-menu"><ul id="menu-top-menu-2" class="footer-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-270519 menu-item-category-379"><a rel="nofollow" href="https://www.cbronline.com/what-is/">What Is</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-923"><a rel="nofollow" href="https://www.cbronline.com/about-us/">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-270579"><a rel="nofollow" href="https://www.cbronline.com/editorial-team/">Editorial Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-924"><a rel="nofollow" href="https://www.cbronline.com/advertise-with-us/">Advertise With Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-925"><a rel="nofollow" href="https://www.cbronline.com/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-926"><a rel="nofollow" href="https://www.cbronline.com/help/">Help</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309852"><a href="http://www.compelo.com/privacy-policy/">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-928"><a rel="nofollow" href="https://www.cbronline.com/rss-feeds/">RSS Feeds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-929"><a rel="nofollow" href="https://www.cbronline.com/site-map/">Site Map</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274502"><a rel="nofollow" href="https://www.cbronline.com/white-papers/">White Papers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307052"><a href="https://www.cbronline.com/terms-and-conditions/">T&#038;C&#8217;s</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307053"><a href="https://www.cbronline.com/gdpr/">GDPR</a></li>
+</ul></div>
+							<p><div class="pps-wrap-content"><div class="pps-the-content pps-first-slide"><nav class="pps-slider-nav pps-clearfix"><a href="https://www.cbronline.com/what-is/what-is-a-url-4934011/2/"><span class="pps-next">Next</span></a><span class="pps-slide-count">1 of 2</span></nav><div class="pps-content pps-clearfix"><p>© 2018 COMPUTER BUSINESS REVIEW. ALL RIGHTS RESERVED.</p>
+</div><nav class="pps-slider-nav pps-bottom-nav pps-clearfix"><a href="https://www.cbronline.com/what-is/what-is-a-url-4934011/2/"><span class="pps-next">Next</span></a><span class="pps-slide-count">1 of 2</span></nav></div></div> </p>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- End Sub Footer -->
+			
+
+
+
+	</section> <!-- End #content-container -->
+
+</div> <!-- End #wrapper -->
+	<a href="#" id="scroll_totop"><i class="fa fa-angle-up"></i></a>
+
+
+<script>
+
+jQuery( "#close-top-leaderboard" ).click(function() {
+  jQuery("#fixed-top-leaderboard").slideUp('slow');
+});
+
+</script>
+
+
+
+
+
+
+<!-- Homepage Background -->
+<script src="/wp-content/themes/goodlife-wp/assets/js/vendor/TweenLite.min.js"></script>
+<script src="/wp-content/themes/goodlife-wp/assets/js/vendor/EasePack.min.js"></script>
+<script src="/wp-content/themes/goodlife-wp/assets/js/vendor/particles.js"></script>
+<script src="/wp-content/themes/goodlife-wp-child/assets/js/modernizr.custom.js"></script>
+
+<!-- .Homepage Background -->
+
+
+<div id="article-switcher" class="">
+	<div class="style-content">
+		<div id="switch-button"><i class="fa fa-newspaper-o" aria-hidden="true"></i></div>
+	</div>
+
+	
+	<div class="timeline-wrapper">
+
+		<a href="/"><img src="/wp-content/uploads/2016/06/cbr-logo-1.png"></a>
+
+		<div class="favourites">
+			<h4>Favourites</h4>
+
+			<div class='wpfp-span'><ul><li>Favorite list is empty.</li></ul><img src='https://www.cbronline.com/wp-content/plugins/wp-favorite-posts/img/star.png' alt='Favorite' title='Favorite' class='wpfp-img' /><img src='https://www.cbronline.com/wp-content/plugins/wp-favorite-posts/img/loading.gif' alt='Loading' title='Loading' class='wpfp-hide wpfp-img' /><a class='wpfp-link' href='?wpfpaction=clear' rel='nofollow'>Clear favorites</a><p></p></div><p>Your favorite posts saved to your browsers cookies. If you clear cookies also favorite posts will be deleted.</p>
+		</div>
+		<div class="timeline">
+			<h4>Latest News on CBR</h4>
+			<div class="articles">
+
+			<div class="timeline-article"><h5><a href="https://www.cbronline.com/news/workplace-by-facebook-features">“Workplace by Facebook” Rolls Out Raft of New Features</a></h5><div class="article-date">11 hours ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/opinion/chinese-behemoths">Go West? Chinese Behemoths Herald Change from The East</a></h5><div class="article-date">12 hours ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/opinion/edge-computing-future-data-center">Edge Computing and the Future of the Data Center   </a></h5><div class="article-date">13 hours ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/atos-to-expand">Atos to Expand its Influence in the US with £2.5 Billion Purchase of Syntel</a></h5><div class="article-date">17 hours ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/open-apis-banks">Sit Tight, Modern APIs Will Soon Take Banks on a Fast Ride</a></h5><div class="article-date">18 hours ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/baseball-cap-hacker-ructions">Baseball Cap Triggers Hacker Conference Ructions</a></h5><div class="article-date">18 hours ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/emotet-trojan">Emotet Trojan on the Market as Hack Groups Become Malware Mercenaries</a></h5><div class="article-date">19 hours ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/full-fibre-broadband-ftir">UK Full Fibre: Sweeping Regulatory Shakeup Needed</a></h5><div class="article-date">19 hours ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/galaxy-tab-s4-biometrics">New Samsung Galaxy Tab S4 to Ditch Fingerprints for Iris Scanner</a></h5><div class="article-date">20 hours ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/opinion/cyber-essentials-most">How to Get the Most out of Cyber Essentials</a></h5><div class="article-date">21 hours ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/singhealth-hacked-pm">Singapore&#8217;s Offical Health Database Breached to the Tune of 1.5 Million Records</a></h5><div class="article-date">4 days ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/tech-giants-data-transfer-project">Facebook, Google, Microsoft and Twitter Launch Data Transfer Project</a></h5><div class="article-date">4 days ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/google-enterprise-new-features">Google Enterprise Gets New Features to Shore Up Security</a></h5><div class="article-date">4 days ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/defra-hands-dxc-contract">Defra Hands DXC £81 Million Contract</a></h5><div class="article-date">4 days ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/mypinpad-open-mpos">MYPINPAD Launches Mobile Point-of-Sale Authentication Platform</a></h5><div class="article-date">4 days ago</div></div><div class="timeline-article"><h5><a href="https://www.cbronline.com/news/virtuallink-standard-vr">Tech Consortium Agrees to Industry Standard for VR Headset Cable</a></h5><div class="article-date">4 days ago</div></div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+</div>
+
+
+
+
+
+<script>
+jQuery( "#switch-button" ).click(function() {
+  jQuery("body.single #article-switcher").toggleClass("active");
+  jQuery("body.category #article-switcher").toggleClass("active");  
+  jQuery("body.page #article-switcher").toggleClass("active");
+  jQuery("body.search #article-switcher").toggleClass("active");
+  jQuery("body.single-whatis .post-detail-row .medium-8").toggleClass("offset");
+  jQuery("body.single .subheader.dark").toggleClass("offset");
+  jQuery("body.single .header .logo").fadeToggle("slow");
+
+});
+</script>
+
+
+<script>
+jQuery( document ).ready(function() {
+	jQuery( "body.single-format-standard #article-switcher" ).addClass( "active" );
+	jQuery('.thb-a').not(":has(iframe)").slideUp(1000);
+
+	var headlineheight;
+	headlineheight = jQuery(".home .post.post-overlay.large-padding .post-gallery .post-title").height();
+	if (headlineheight > 200) {
+		//jQuery(".home .post.post-overlay.large-padding .post-gallery .post-title").css( "bottom", "28%" );
+	}
+	if (headlineheight > 300) {
+		//jQuery(".home .post.post-overlay.large-padding .post-gallery .post-title").css( "bottom", "22%" );
+	}
+			
+			/* brightcove video loading start */
+	setTimeout( function(){ 
+		jQuery( "object" ).each(function() {
+		 // console.log($(this).attr('id'));
+		  if(jQuery(this).attr('id')=="myExperience4184448638001"){
+			 //alert(jQuery(this).attr('data'));
+			 jQuery(this).attr('data',jQuery(this).attr('data').replace('http','https'));
+			 //$(this).attr('data').replace('http', 'https');
+			//alert($(this).attr('data'));
+		   }
+		  });
+	}  , 500 );
+	
+});
+
+
+
+function resizeText(multiplier) {
+
+	var fontSize = parseInt(jQuery(".post .post-content p").css("font-size"));
+	fontSize = (fontSize + multiplier * 2) + "px";
+	jQuery(".post .post-content p").css({'font-size':fontSize});
+
+
+	var fontSize2 = parseInt(jQuery("body.single .post-content-container .excerpt p").css("font-size"));
+	fontSize2 = (fontSize2 + multiplier * 2) + "px";
+	jQuery("body.single .post-content-container .excerpt p").css({'font-size':fontSize2});
+
+	var fontSize2b = parseInt(jQuery("body.single .post-content-container .excerpt p").css("line-height"));
+	fontSize2b = (fontSize2b + multiplier * 2) + "px";
+	jQuery("body.single .post-content-container .excerpt p").css({'line-height':fontSize2b});
+
+	var fontSize3 = parseInt(jQuery("body.single .blog-post .entry-title").css("font-size"));
+	fontSize3 = (fontSize3 + multiplier * 2) + "px";
+	jQuery("body.single .blog-post .entry-title").css({'font-size':fontSize3});
+
+}
+
+
+function validateEmail($email) {
+	  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	  //  /^[A-Za-z0-9@ _.]+$/g;
+	  //var emailReg = /^([A-Za-z0-9@ _.])+$/;
+
+	  return emailReg.test( $email );
+}
+
+jQuery( ".wpcf7-submit" ).click(function() {
+
+	  
+
+
+
+	    var str = jQuery('.your-email input').val();
+
+
+	     var at_test = /([A-Za-z0-9@ _.])/g;
+         var at_result = at_test.test(str);
+          if(at_result!=true){
+			    	jQuery( ".your-email input" ).addClass( "wpcf7-not-valid" );
+			    	
+			    	jQuery('.your-email input').val("");
+
+
+			    }
+			    
+			    	jQuery('.your-email').css("display","block");
+
+
+			    	var strng = jQuery('.your-email input').val();
+			    
+
+
+
+			    var wanted = /@/g;
+
+			    	var the_res = wanted.test(strng);
+
+			    
+
+			    	if(the_res == false){
+			    	jQuery( ".your-email input" ).addClass( "wpcf7-not-valid" );
+			    	jQuery('.your-email input').val("");
+
+			    }
+			    
+			    var first_ca = strng.substring(0, 1);
+			   
+			   if(first_ca == '-'){
+			   	jQuery( ".your-email input" ).addClass( "wpcf7-not-valid" );
+			    
+			    jQuery('.your-email input').val("");
+
+			   }
+
+			    	
+
+
+	    if (str != '') {
+		    valEmail = validateEmail(str);
+		    if (valEmail == true) {
+			   
+		    } 
+		    else {
+				jQuery( ".your-email input" ).addClass( "wpcf7-not-valid" );
+		    }
+		} else {
+			if (!jQuery('.your-email input').hasClass("wpcf7-not-valid")) {
+				jQuery( ".your-email input" ).addClass( "wpcf7-not-valid" );
+		        	jQuery( "<p>Email field is empty!</p>" ).insertAfter( ".your-email input" );
+		      }
+		}
+
+});
+
+
+</script>
+
+
+
+
+
+<script>
+jQuery(window).bind('scroll', function() {
+
+
+
+
+    var scroll = jQuery(window).scrollTop();
+   if(jQuery(window).scrollTop() + jQuery(window).height() > jQuery(document).height() - 2000) {
+       jQuery("#prevNextButtons").fadeOut(500);
+   }
+   else {
+    if (scroll >= 370) {
+        jQuery("#prevNextButtons").fadeIn(500);
+    } else {
+		jQuery("#prevNextButtons").fadeOut(500);
+	}
+   }
+
+
+});
+
+
+</script>
+
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.cbronline.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pps_options_object = {"scroll_up":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/plugins/paged-post-slider/paged-post.js?ver=4.9.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sticky_anything_engage = {"element":".dmpu","topspace":"80","minscreenwidth":"0","maxscreenwidth":"999999","zindex":"1","legacymode":"","dynamicmode":"","debugmode":"","pushup":".fixed_breakpoint","adminbar":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/plugins/sticky-menu-or-anything-on-scroll/assets/js/stickThis.js?ver=2.0.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var unlimited_server_values = {"pb_un_1474037630":{"threshold":400,"untype":"load","load_more_text":"Load more","loading_text":"Loading...","content":".cool-category","post":".post","nav":".navigation","next":".next","loader_img_url":"https:\/\/www.cbronline.com\/wp-content\/uploads\/2017\/11\/default.gif","loader_img_name":"default.gif","no_more_text":"No more posts to show","history":"on","scrollto":"html, body","name":"Category Infinite Scroll","status":"on","key":"pb_un_1474037630","scroll_to_top":"on","can_opt_out":"on","stop_text":"Disable undefined","start_text":"Enable undefined"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/plugins/unlimited/js/un.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var leadin_wordpress = {"userRole":"visitor","pageType":"post","leadinPluginVersion":"6.1.2"};
+/* ]]> */
+</script>
+<script type='text/javascript' async defer src='//js.hs-scripts.com/2469778.js?ver=4.9.6'></script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-includes/js/comment-reply.min.js?ver=4.9.6'></script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/themes/goodlife-wp/assets/js/vendor.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var themeajax = {"url":"https:\/\/www.cbronline.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/themes/goodlife-wp/assets/js/app.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var author = {"name":"Joao Lima"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-content/themes/goodlife-wp-child/js/google.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://www.cbronline.com/wp-includes/js/wp-embed.min.js?ver=4.9.6'></script>
+
+
+
+<script src="/wp-content/themes/goodlife-wp-child/assets/js/toucheffects.js" />
+
+<!---- Pardot Onboarding Tracking code ----------------->
+
+<script type="text/javascript">
+piAId = '376012';
+piCId = '71755';
+
+(function() {
+ function async_load(){
+  var s = document.createElement('script'); s.type = 'text/javascript';
+  s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+  var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+ }
+ if(window.attachEvent) { window.attachEvent('onload', async_load); }
+ else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+
+<!---- Pardot Onboarding Tracking code ----------------->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e9ed1ff2a6","applicationID":"32435146","transactionName":"YFQBMUsCDUcCUEBcC1keIgZNCgxaTEBdWwNbVA==","queueTime":0,"applicationTime":1055,"atts":"TBMCRwMYHkk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
